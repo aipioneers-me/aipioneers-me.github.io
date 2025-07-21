@@ -1,0 +1,13 @@
+"Timestamp","Email","Name","Organization","Please write a short bio about yourself (in third person). It will be visible to students when they browse project opportunities.","Upload your research project here (1 pages). Mention the purpose of the research, the research gap you aim to address, and the methods you aim to explore. Include references to related work. ","Enter a title for your research project.","What is the research area of the proposed project? (If multiple, separate with commas.)","Which competencies/experience/classes should students bring to work on your project (we are mainly focusing on undergraduate students)? These prerequisites will be displayed to students, and they will be asked to explain how they meet them.
+Examples:
+·      Highly proficient using Python. 
+·      Trained or fine-tuned a transformer language model in PyTorch (toy models and following guides is fine).
+·      At least 50 hours working with LLMs.","Specify three questions for students to answer, ideally specific to your project.
+Example Questions:
+·      Please provide a critique of the following paper: [link to paper]
+·      Propose an initial experiment to begin researching the questions in the research plan. 
+·      Please link to a public code repository or Colab notebook that shows something you’ve implemented. A small or toy project is perfectly fine.
+
+Student Question 1:","Student Question 2:","Student Question 3:","What are the minimum hours per week you would like students to spend on your project? Note that most students will work part-time on projects."
+"2025/07/15 4:26:28 PM AST","hello@claushorn.com","TEST TEST TEST","Stanford","It's me.","https://drive.google.com/u/3/open?usp=forms_web&id=1xqqOohBqX-JiCLklq0keMPK8CxRWcl9j","LLM Agent stuff","AI safety","bla 
+blup","How","Why","","1"

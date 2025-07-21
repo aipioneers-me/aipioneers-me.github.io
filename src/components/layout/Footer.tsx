@@ -13,11 +13,23 @@ const Footer = () => {
               AI Pioneers
             </h3>
             <p className="text-sm text-charcoal/70 max-w-md">
-              Helping organizations unlock the power of AI safely and strategically 
-              through expert advisory and implementation services.
+              Empowering the next generation of AI researchers through mentorship, collaboration, and open science.
             </p>
           </div>
-          
+          {/* Call to Donate - center column */}
+          <div className="w-full max-w-xl mx-auto">
+            <div className="flex flex-col md:flex-row items-center border border-accent-blue/30 rounded-lg p-4 bg-white/60 w-full justify-between">
+              <div className="flex-1 text-right md:pr-3">
+                <span className="block text-base text-charcoal font-medium">If you think this is useful, we are always </span>
+                <span className="block text-base text-charcoal font-medium">happy for any type of support you can afford.</span>
+              </div>
+              <div className="flex-shrink-0 md:pl-6 mt-3 md:mt-0">
+                <a href="/donate" className="inline-block">
+                  <button className="bg-dark-red hover:bg-dark-red/90 text-white font-semibold px-6 py-2 rounded-md shadow transition-colors">Donate</button>
+                </a>
+              </div>
+            </div>
+          </div>
           <div className="mt-8 md:mt-0">
             <h4 className="text-sm font-semibold text-charcoal mb-3">Connect</h4>
             <div className="flex space-x-3">
@@ -40,8 +52,8 @@ const Footer = () => {
         </div>
         
         {/* Join the Team message */}
-        <div className="mt-8 flex justify-center">
-          <span className="inline-block bg-accent-blue/10 text-accent-blue font-semibold px-4 py-2 rounded-md shadow-sm text-center">
+        <div className="w-full max-w-xl mx-auto mt-8 flex justify-center">
+          <span className="inline-block bg-accent-blue/10 text-accent-blue font-semibold px-4 py-2 rounded-md shadow-sm text-center w-full">
             Join the Team: We are looking for Mentor and Student Coordinators.
           </span>
         </div>

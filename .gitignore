@@ -1,0 +1,39 @@
+# macOS system files
+.DS_Store  
+
+# Node.js / JavaScript projects
+node_modules/  
+dist/  
+build/  
+
+# Python projects
+__pycache__/  
+*.pyc  
+*.pyo  
+*.pyd  
+.env  
+
+# VSCode settings
+.vscode/  
+
+# Logs and temporary files
+*.log  
+*.tmp  
+
+# Auth0 or sensitive config files (example)
+.env.local  
+.env.*.local  
+
+# OS trash files
+.Trashes  
+*.swp  
+
+# If using JetBrains IDEs
+.idea/  
+
+# If using macOS + React/Next.js
+.next/  
+out/  
+
+# Optional for TypeScript
+*.tsbuildinfo  

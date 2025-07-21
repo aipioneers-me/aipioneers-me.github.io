@@ -48,17 +48,14 @@ const Navbar = () => {
               Mentors 
             </Link>
             <Link to="/students" className="font-medium text-charcoal/80 hover:text-charcoal transition-colors">
-              Students
+              Participants
             </Link>
             <Link to="/projects" className="font-medium text-charcoal/80 hover:text-charcoal transition-colors">
               Research Projects
             </Link>
-            <button
-              onClick={() => scrollToSection("alumni")}
-              className="font-medium text-charcoal/80 hover:text-charcoal transition-colors"
-            >
+            <Link to="/alumni" className="font-medium text-charcoal/80 hover:text-charcoal transition-colors">
               Alumni Network
-            </button>
+            </Link>
           </nav>
 
           <div className="hidden md:block">
@@ -95,17 +92,14 @@ const Navbar = () => {
               Mentors Page
             </Link>
             <Link to="/students" className="block w-full text-left px-3 py-3 font-medium text-charcoal hover:bg-light-gray rounded-md">
-              Students
+              Participants
             </Link>
             <Link to="/projects" className="block w-full text-left px-3 py-3 font-medium text-charcoal hover:bg-light-gray rounded-md">
               Research Projects
             </Link>
-            <button
-              onClick={() => scrollToSection("alumni")}
-              className="block w-full text-left px-3 py-3 font-medium text-charcoal hover:bg-light-gray rounded-md"
-            >
+            <Link to="/alumni" className="block w-full text-left px-3 py-3 font-medium text-charcoal hover:bg-light-gray rounded-md">
               Alumni Network
-            </button>
+            </Link>
             <div className="px-3 py-3">
               <Button
                 onClick={() => scrollToSection("contact")}
