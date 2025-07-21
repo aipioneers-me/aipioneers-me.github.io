@@ -31,9 +31,6 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Process essays
-        run: node scripts/process-essays.js
-
       - name: Build project
         run: npm run build
 
