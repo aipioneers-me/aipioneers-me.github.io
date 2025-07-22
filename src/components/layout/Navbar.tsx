@@ -59,12 +59,13 @@ const Navbar = () => {
           </nav>
 
           <div className="hidden md:block">
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="bg-dark-red hover:bg-dark-red/90 text-white"
-            >
-              Donate
-            </Button>
+            <a href="https://donorbox.org/ai-pioneers" target="_blank" rel="noopener noreferrer">
+              <Button
+                className="bg-dark-red hover:bg-dark-red/90 text-white"
+              >
+                Donate
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -101,12 +102,13 @@ const Navbar = () => {
               Alumni Network
             </Link>
             <div className="px-3 py-3">
-              <Button
-                onClick={() => scrollToSection("contact")}
-                className="w-full bg-dark-red hover:bg-dark-red/90 text-white"
-              >
-                Book a Consultation
-              </Button>
+              <a href="https://donorbox.org/ai-pioneers" target="_blank" rel="noopener noreferrer" className="w-full inline-block">
+                <Button
+                  className="w-full bg-dark-red hover:bg-dark-red/90 text-white"
+                >
+                  Donate
+                </Button>
+              </a>
             </div>
           </div>
         </div>
