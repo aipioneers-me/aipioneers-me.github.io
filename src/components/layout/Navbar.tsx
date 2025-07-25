@@ -90,7 +90,7 @@ const Navbar = () => {
         <div className="md:hidden bg-white shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             <Link to="/mentors" className="block w-full text-left px-3 py-3 font-medium text-charcoal hover:bg-light-gray rounded-md">
-              Mentors Page
+              Mentors 
             </Link>
             <Link to="/students" className="block w-full text-left px-3 py-3 font-medium text-charcoal hover:bg-light-gray rounded-md">
               Participants
