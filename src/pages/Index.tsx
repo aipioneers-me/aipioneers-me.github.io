@@ -9,7 +9,7 @@ const MissionSection = () => (
     <div className="section-container max-w-3xl mx-auto">
       <h2 className="section-title text-2xl md:text-3xl font-bold mb-6 text-accent-blue">Our Mission</h2>
       <p className="text-lg text-charcoal/80 mb-2">
-        We are a global, not-for-profit initiative dedicated to advancing AI research through mentorship. Our community brings together experienced researchers and motivated students to collaborate on impactful research projects. We believe in open science, inclusive education, and the power of hands-on learning to shape the next generation of AI pioneers.
+        We are a global, nonprofit initiative dedicated to advancing AI research through mentorship. Our community brings together experienced researchers and motivated students to collaborate on impactful research projects. We believe in open science, inclusive education, and the power of hands-on learning to shape the next generation of AI pioneers.
       </p>
       <p className="text-lg text-charcoal/80 mb-2">
       We are especially committed to advancing AI safety and promoting applications of AI that are safe, ethical, and beneficial to society.      </p>
