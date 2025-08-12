@@ -42,7 +42,11 @@ const ProgramTimelineSection = () => (
           <span className="flex-1 text-left"><strong>1st of September - 29th of November 2025</strong></span>
         </div>
         <div className="flex items-start">
-          <span className="w-64 text-right pr-4 font-medium">Registration Deadline:</span>
+          <span className="w-64 text-right pr-4 font-medium">Deadline for Mentors to submit project proposals:</span>
+          <span className="flex-1 text-left"><strong>August 22th, 2025</strong></span>
+        </div>
+        <div className="flex items-start">
+          <span className="w-64 text-right pr-4 font-medium">Student Registration Deadline:</span>
           <span className="flex-1 text-left"><strong>August 25th, 2025</strong></span>
         </div>
         <div className="flex items-start">
@@ -81,6 +85,11 @@ const PIsSection = () => (
           <h3 className="text-lg font-semibold text-charcoal mb-1">Prof. María Rodríguez Martínez, Yale University</h3>
           <p className="text-charcoal/80 mb-1">PhD in Gravitation and Cosmology, Institut d’Astrophysique de Paris — <a href="https://medicine.yale.edu/profile/maria-rodriguezmartinez/" target="_blank" rel="noopener noreferrer" className="text-accent-blue underline">Profile</a></p>
           <p className="text-charcoal/70">Research Focus: AI-driven systems biology, interpretable machine learning for immunology, and computational modeling of immune responses in cancer and autoimmune diseases</p>
+        </div>
+        <div>
+          <h3 className="text-lg font-semibold text-charcoal mb-1">Prof. Ariel Schwarzman, Stanford University</h3>
+          <p className="text-charcoal/80 mb-1">PhD Particle Physics, Princeton University — <a href="https://profiles.stanford.edu/ariel-schwartzman" target="_blank" rel="noopener noreferrer" className="text-accent-blue underline">Profile</a></p>
+          <p className="text-charcoal/70">Research Focus: Particle Physics and Astrophysics</p>
         </div>
       </div>
     </div>
