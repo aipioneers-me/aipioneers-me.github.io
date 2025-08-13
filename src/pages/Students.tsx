@@ -73,7 +73,7 @@ const Students = () => (
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="faq-5">
-          <AccordionTrigger>How Much Time Does It Take?</AccordionTrigger>
+          <AccordionTrigger>How much time does it take?</AccordionTrigger>
           <AccordionContent>
             Most participants join on a part-time basis, though some choose to work full-time on their projects. We recommend planning for at least 6 hours per week.
           </AccordionContent>

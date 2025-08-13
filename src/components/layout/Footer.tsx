@@ -41,7 +41,9 @@ const Footer = () => {
                 <Mail className="h-5 w-5" />
               </a>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/company/ai-pioneers-me" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-charcoal/70 hover:text-charcoal transition-colors"
                 aria-label="LinkedIn"
               >

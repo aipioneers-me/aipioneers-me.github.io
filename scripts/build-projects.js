@@ -6,55 +6,70 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 function parseCSV(csvContent) {
-  const lines = csvContent.split('\n').filter(line => line.trim() !== '');
-  if (lines.length < 2) return [];
-  
-  // Parse headers
-  const headerLine = lines[0];
+  // Don't split on newlines first - parse the entire content as one string
   const headers = [];
-  let currentHeader = '';
-  let inQuotes = false;
-  
-  for (let i = 0; i < headerLine.length; i++) {
-    const char = headerLine[i];
-    if (char === '"') {
-      inQuotes = !inQuotes;
-    } else if (char === ',' && !inQuotes) {
-      headers.push(currentHeader.trim());
-      currentHeader = '';
-    } else {
-      currentHeader += char;
-    }
-  }
-  headers.push(currentHeader.trim());
-  
   const projects = [];
   
-  // Parse data rows
-  for (let i = 1; i < lines.length; i++) {
-    const line = lines[i];
-    const values = [];
-    let current = '';
-    let inQuotes = false;
+  let currentField = '';
+  let inQuotes = false;
+  let currentRow = [];
+  let currentRowIndex = 0;
+  let isHeaderRow = true;
+  
+  for (let i = 0; i < csvContent.length; i++) {
+    const char = csvContent[i];
+    const nextChar = csvContent[i + 1];
     
-    for (let j = 0; j < line.length; j++) {
-      const char = line[j];
-      
-      if (char === '"') {
-        inQuotes = !inQuotes;
-      } else if (char === ',' && !inQuotes) {
-        values.push(current.trim());
-        current = '';
+    if (char === '"') {
+      if (nextChar === '"') {
+        // Escaped quote
+        currentField += '"';
+        i++; // Skip next quote
       } else {
-        current += char;
+        // Toggle quote state
+        inQuotes = !inQuotes;
       }
+    } else if (char === ',' && !inQuotes) {
+      // End of field
+      currentRow.push(currentField.trim());
+      currentField = '';
+    } else if (char === '\n' && !inQuotes) {
+      // End of row
+      currentRow.push(currentField.trim());
+      currentField = '';
+      
+      if (currentRow.length > 0 && currentRow.some(field => field.trim() !== '')) {
+        if (isHeaderRow) {
+          headers.push(...currentRow);
+          console.log('📋 Parsed headers:', headers);
+          isHeaderRow = false;
+        } else if (currentRow.length >= headers.length) {
+          const project = {};
+          headers.forEach((header, index) => {
+            project[header] = currentRow[index] || '';
+          });
+          projects.push(project);
+        } else {
+          console.log(`⚠️  Row ${currentRowIndex + 1} has ${currentRow.length} values but ${headers.length} headers`);
+        }
+      }
+      
+      currentRow = [];
+      currentRowIndex++;
+    } else {
+      currentField += char;
     }
-    values.push(current.trim());
-    
-    if (values.length >= headers.length) {
+  }
+  
+  // Handle the last field/row
+  if (currentField.trim() !== '') {
+    currentRow.push(currentField.trim());
+  }
+  if (currentRow.length > 0 && !isHeaderRow && currentRow.some(field => field.trim() !== '')) {
+    if (currentRow.length >= headers.length) {
       const project = {};
       headers.forEach((header, index) => {
-        project[header] = values[index] || '';
+        project[header] = currentRow[index] || '';
       });
       projects.push(project);
     }
@@ -64,27 +79,55 @@ function parseCSV(csvContent) {
 }
 
 function transformProjects(projects) {
-  return projects.map(project => ({
-    id: project['Timestamp'] || Date.now().toString(),
-    mentor: {
-      name: project['Name'] || 'Anonymous',
-      organization: project['Organization'] || '',
-      bio: project['Please write a short bio about yourself (in third person). It will be visible to students when they browse project opportunities.'] || '',
-      email: project['Email'] || ''
-    },
-    project: {
-      title: project['Enter a title for your research project.'] || 'Untitled Project',
-      description: project['Upload your research project here (1 pages). Mention the purpose of the research, the research gap you aim to address, and the methods you aim to explore. Include references to related work. '] || '',
-      researchArea: project['What is the research area of the proposed project? (If multiple, separate with commas.)'] || '',
-      prerequisites: project['Which competencies/experience/classes should students bring to work on your project (we are mainly focusing on undergraduate students)? These prerequisites will be displayed to students, and they will be asked to explain how they meet them.\nExamples:\n·      Highly proficient using Python. \n·      Trained or fine-tuned a transformer language model in PyTorch (toy models and following guides is fine).\n·      At least 50 hours working with LLMs.'] || '',
-      hoursPerWeek: project['What are the minimum hours per week you would like students to spend on your project? Note that most students will work part-time on projects.'] || ''
-    },
-    questions: [
-      project['Student Question 1:'] || '',
-      project['Student Question 2:'] || '',
-      project['Student Question 3:'] || ''
-    ].filter(q => q.trim() !== '')
-  }));
+  const getByContains = (obj, substrings) => {
+    const keys = Object.keys(obj);
+    const key = keys.find(k => substrings.every(s => k.includes(s)));
+    return key ? obj[key] : '';
+  };
+
+  return projects.map(project => {
+    // Log the first project to debug column mapping
+    if (projects.indexOf(project) === 0) {
+      console.log('🔍 First project raw data:', project);
+    }
+
+    const id = project['Timestamp'] || Date.now().toString();
+    const name = project['Name'] || '';
+    const organization = project['Organization'] || '';
+    const email = project['Email'] || '';
+    const bio = getByContains(project, ['Please write a short bio about yourself']);
+    const photo = getByContains(project, ['Please upload a photo of yourself']);
+
+    const title = getByContains(project, ['Enter a title for your research project']) || 'Untitled Project';
+    const description = getByContains(project, ['Upload your research project here']);
+    const researchArea = getByContains(project, ['What is the research area of the proposed project']);
+    const prerequisites = getByContains(project, ['Which competencies/experience/classes should students bring']);
+    const hoursPerWeek = getByContains(project, ['What are the minimum hours per week you would like students']);
+
+    const q1 = getByContains(project, ['Student Question 1']);
+    const q2 = getByContains(project, ['Student Question 2']);
+    const q3 = getByContains(project, ['Student Question 3']);
+    const questions = [q1, q2, q3].filter(q => typeof q === 'string' && q.trim() !== '');
+
+    return {
+      id,
+      mentor: {
+        name: name || 'Anonymous',
+        organization,
+        bio,
+        email,
+        photo
+      },
+      project: {
+        title,
+        description,
+        researchArea,
+        prerequisites,
+        hoursPerWeek
+      },
+      questions
+    };
+  });
 }
 
 function buildProjects() {
@@ -126,4 +169,4 @@ function buildProjects() {
   }
 }
 
-buildProjects(); 
+buildProjects();

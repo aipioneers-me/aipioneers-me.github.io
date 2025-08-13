@@ -13,6 +13,7 @@ interface Project {
     organization: string;
     bio: string;
     email: string;
+    photo?: string;
   };
   project: {
     title: string;
@@ -31,6 +32,32 @@ const ResearchProjects = () => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const { isAuthenticated, isLoading: authLoading } = useAuth();
+
+  const isUrl = (text: string): boolean => /^(https?:\/\/)/i.test(text.trim());
+
+  const renderTextWithLinks = (text: string): React.ReactNode[] => {
+    const parts: React.ReactNode[] = [];
+    const urlRegex = /(https?:\/\/[^\s)]+)/g;
+    let lastIndex = 0;
+    let match: RegExpExecArray | null;
+    while ((match = urlRegex.exec(text)) !== null) {
+      const [url] = match;
+      const index = match.index;
+      if (index > lastIndex) {
+        parts.push(text.slice(lastIndex, index));
+      }
+      parts.push(
+        <a key={`${url}-${index}`} href={url} target="_blank" rel="noopener noreferrer" className="text-accent-blue hover:underline break-words">
+          {url}
+        </a>
+      );
+      lastIndex = index + url.length;
+    }
+    if (lastIndex < text.length) {
+      parts.push(text.slice(lastIndex));
+    }
+    return parts;
+  };
 
   useEffect(() => {
     const loadProjects = async () => {
@@ -96,7 +123,7 @@ const ResearchProjects = () => {
             </div>
           )}
           <div className="bg-light-gray p-8 rounded-lg text-center">
-            <p className="text-lg text-charcoal/80 mb-4">Research projects will be listed here September 1</p>
+            <p className="text-lg text-charcoal/80 mb-4">Research projects will be listed here.</p>
             <p className="text-charcoal/60">Check back soon to browse available research opportunities!</p>
           </div>
         </div>
@@ -157,123 +184,165 @@ const ResearchProjects = () => {
             <div key={project.id} className="bg-white p-8 rounded-lg shadow-sm border">
               <div className="mb-6">
                 <h2 className="text-2xl font-semibold text-charcoal mb-2">{project.project.title}</h2>
-                <p className="text-accent-blue font-medium">{project.mentor.name} • {project.mentor.organization}</p>
               </div>
               
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-lg font-semibold text-charcoal mb-3">Project Description</h3>
-                  <p className="text-charcoal/80 mb-4 whitespace-pre-wrap">{project.project.description}</p>
+                  {isUrl(project.project.description) ? (
+                    <a
+                      href={project.project.description.replace('/open?id=', '/uc?export=download&id=')}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-accent-blue hover:underline break-words text-lg font-semibold mb-3 block"
+                    >
+                      Download Project Description PDF
+                    </a>
+                  ) : (
+                    <p className="text-charcoal/80 mb-4 whitespace-pre-wrap">{project.project.description}</p>
+                  )}
                   
                   <h3 className="text-lg font-semibold text-charcoal mb-3">Research Area</h3>
                   <p className="text-charcoal/80 mb-4">{project.project.researchArea}</p>
                   
                   <h3 className="text-lg font-semibold text-charcoal mb-3">Prerequisites</h3>
                   <p className="text-charcoal/80 mb-4 whitespace-pre-wrap">{project.project.prerequisites}</p>
-                </div>
-                
-                <div>
-                  <h3 className="text-lg font-semibold text-charcoal mb-3">Mentor Bio</h3>
-                  <p className="text-charcoal/80 mb-4">{project.mentor.bio}</p>
-                  
-                  <h3 className="text-lg font-semibold text-charcoal mb-3">Time Commitment</h3>
-                  <p className="text-charcoal/80 mb-4">{project.project.hoursPerWeek} hours per week</p>
                   
                   {project.questions.length > 0 && (
                     <>
                       <h3 className="text-lg font-semibold text-charcoal mb-3">Application Questions</h3>
-                      <ol className="list-decimal list-inside space-y-2 text-charcoal/80">
+                      <ol className="list-decimal list-inside space-y-2 text-charcoal/80 mb-4">
                         {project.questions.map((question, index) => (
-                          <li key={index}>{question}</li>
+                          <li key={index} className="break-words">{renderTextWithLinks(question)}</li>
                         ))}
                       </ol>
                     </>
                   )}
+                  
+                  <h3 className="text-lg font-semibold text-charcoal mb-3">Time Commitment</h3>
+                  <p className="text-charcoal/80 mb-4">{project.project.hoursPerWeek} hours per week</p>
+                </div>
+                
+                                <div>
+                  <h3 className="text-lg font-semibold text-charcoal mb-3">Your Mentor</h3>
+                  
+                  {project.mentor.photo && (
+                    <div className="mb-4 flex justify-center">
+                      <img 
+                        src={project.mentor.photo
+                          .replace('/open?id=', '/uc?export=view&id=')
+                          .replace('/file/d/', '/uc?export=view&id=')
+                          .replace('/view?usp=sharing', '')} 
+                        alt={`Photo of ${project.mentor.name}`}
+                        className="h-40 w-auto object-cover rounded-lg border border-gray-200"
+                        onError={(e) => {
+                          console.error('Failed to load mentor photo:', project.mentor.photo);
+                          console.error('Transformed URL:', e.currentTarget.src);
+                          // Try thumbnail API as fallback
+                          const fileId = project.mentor.photo.match(/[-\w]{25,}/)?.[0];
+                          if (fileId) {
+                            e.currentTarget.src = `https://drive.google.com/thumbnail?id=${fileId}&sz=w256`;
+                            console.log('Trying thumbnail fallback:', e.currentTarget.src);
+                          } else {
+                            e.currentTarget.style.display = 'none';
+                          }
+                        }}
+                        onLoad={() => console.log('Mentor photo loaded successfully:', project.mentor.photo)}
+                      />
+                    </div>
+                  )}
+                  
+                  <p className="text-accent-blue font-medium mb-4">{project.mentor.name} • {project.mentor.organization}</p>
+                  <p className="text-charcoal/80 mb-4">{project.mentor.bio}</p>
+                  
+                  <div className="mt-6 pt-6 border-t border-gray-200">
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button 
+                          onClick={() => setSelectedProject(project)}
+                          disabled={!isAuthenticated}
+                          className={`w-full font-semibold py-3 ${
+                            isAuthenticated 
+                              ? 'bg-accent-blue hover:bg-accent-blue/90 text-white' 
+                              : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                          }`}
+                        >
+                          {isAuthenticated ? 'Apply to this Project' : 'Login to Apply'}
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
+                        <DialogHeader>
+                          <DialogTitle className="text-xl font-semibold text-charcoal">
+                            Apply to: {project.project.title}
+                          </DialogTitle>
+                        </DialogHeader>
+                        
+                        <div className="space-y-6">
+                          {project.project.pdfUrl && (
+                            <div className="bg-light-gray p-4 rounded-lg">
+                              <div className="flex items-center mb-2">
+                                <FileText className="w-5 h-5 text-accent-blue mr-2" />
+                                <h3 className="font-semibold text-charcoal">Project Description PDF</h3>
+                              </div>
+                              <a 
+                                href={project.project.pdfUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-accent-blue hover:underline"
+                              >
+                                View PDF Description
+                              </a>
+                            </div>
+                          )}
+                          
+                          <div>
+                            <h3 className="text-lg font-semibold text-charcoal mb-3">
+                              In order to apply to this project submit a PDF with your answers to these questions:
+                            </h3>
+                            <ol className="list-decimal list-inside space-y-2 text-charcoal/80 mb-4">
+                              {project.questions.map((question, index) => (
+                                <li key={index} className="mb-2">{question}</li>
+                              ))}
+                            </ol>
+                          </div>
+                          
+                          <div className="space-y-4">
+                            <div>
+                              <label htmlFor="pdf-upload" className="block text-sm font-medium text-charcoal mb-2">
+                                Upload your PDF application
+                              </label>
+                              <div className="flex items-center space-x-4">
+                                <input
+                                  type="file"
+                                  id="pdf-upload"
+                                  accept=".pdf"
+                                  onChange={handleFileUpload}
+                                  className="block w-full text-sm text-charcoal/80 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-accent-blue file:text-white hover:file:bg-accent-blue/90"
+                                />
+                              </div>
+                              {uploadedFile && (
+                                <p className="text-sm text-green-600 mt-2 flex items-center">
+                                  <Upload className="w-4 h-4 mr-1" />
+                                  {uploadedFile.name} selected
+                                </p>
+                              )}
+                            </div>
+                            
+                            <Button 
+                              onClick={handleSubmitApplication}
+                              disabled={!uploadedFile}
+                              className="w-full bg-accent-blue hover:bg-accent-blue/90 text-white font-semibold py-3"
+                            >
+                              Submit Application
+                            </Button>
+                          </div>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+                  </div>
                 </div>
               </div>
               
-              {isAuthenticated && (
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button 
-                        onClick={() => setSelectedProject(project)}
-                        className="bg-accent-blue hover:bg-accent-blue/90 text-white font-semibold py-3 px-6"
-                      >
-                        Apply to this Project
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-                      <DialogHeader>
-                        <DialogTitle className="text-xl font-semibold text-charcoal">
-                          Apply to: {project.project.title}
-                        </DialogTitle>
-                      </DialogHeader>
-                      
-                      <div className="space-y-6">
-                        {project.project.pdfUrl && (
-                          <div className="bg-light-gray p-4 rounded-lg">
-                            <div className="flex items-center mb-2">
-                              <FileText className="w-5 h-5 text-accent-blue mr-2" />
-                              <h3 className="font-semibold text-charcoal">Project Description PDF</h3>
-                            </div>
-                            <a 
-                              href={project.project.pdfUrl} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="text-accent-blue hover:underline"
-                            >
-                              View PDF Description
-                            </a>
-                          </div>
-                        )}
-                        
-                        <div>
-                          <h3 className="text-lg font-semibold text-charcoal mb-3">
-                            In order to apply to this project submit a PDF with your answers to these questions:
-                          </h3>
-                          <ol className="list-decimal list-inside space-y-2 text-charcoal/80 mb-4">
-                            {project.questions.map((question, index) => (
-                              <li key={index} className="mb-2">{question}</li>
-                            ))}
-                          </ol>
-                        </div>
-                        
-                        <div className="space-y-4">
-                          <div>
-                            <label htmlFor="pdf-upload" className="block text-sm font-medium text-charcoal mb-2">
-                              Upload your PDF application
-                            </label>
-                            <div className="flex items-center space-x-4">
-                              <input
-                                type="file"
-                                id="pdf-upload"
-                                accept=".pdf"
-                                onChange={handleFileUpload}
-                                className="block w-full text-sm text-charcoal/80 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-accent-blue file:text-white hover:file:bg-accent-blue/90"
-                              />
-                            </div>
-                            {uploadedFile && (
-                              <p className="text-sm text-green-600 mt-2 flex items-center">
-                                <Upload className="w-4 h-4 mr-1" />
-                                {uploadedFile.name} selected
-                              </p>
-                            )}
-                          </div>
-                          
-                          <Button 
-                            onClick={handleSubmitApplication}
-                            disabled={!uploadedFile}
-                            className="w-full bg-accent-blue hover:bg-accent-blue/90 text-white font-semibold py-3"
-                          >
-                            Submit Application
-                          </Button>
-                        </div>
-                      </div>
-                    </DialogContent>
-                  </Dialog>
-                </div>
-              )}
+
             </div>
           ))}
         </div>
