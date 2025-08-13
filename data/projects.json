@@ -1,19 +1,23 @@
 [
   {
-    "id": "2025/07/15 4:26:28 PM AST",
+    "id": "8/4/2025 16:45:03",
     "mentor": {
-      "name": "TEST TEST TEST",
-      "organization": "Stanford",
-      "bio": "It's me.",
-      "email": "hello@claushorn.com"
+      "name": "Haris Smajlović",
+      "organization": "BIDS department @ Yale School of Medicine",
+      "bio": "Haris is a Postdoctoral Associate at the Hoon Cho Lab at the BIDS department of Yale School of Medicine. Previously, he was a Ph.D. student at the 0xTCG lab at the University of Victoria, Canada, under the supervision of prof. Ibrahim Numanagić. Before that, he was a lecturer at the Department of Mathematics of the University of Sarajevo and a lead software engineer at Symphony.is. He graduated from the Faculty of Mathematics and Natural Sciences of the University of Sarajevo, under the supervision of prof. Adis Alihodžić.\nHe is interested in privacy-enhancing technologies, programming languages, and securing biomedical workflows.",
+      "email": "haris.smajlovic@yale.edu",
+      "photo": "https://drive.google.com/file/d/1fwm7T4CZOrW5RZERY6kXvbyrjct9Nr1J/view?usp=sharing"
     },
     "project": {
-      "title": "LLM Agent stuff",
-      "description": "",
-      "researchArea": "AI safety",
-      "prerequisites": "",
-      "hoursPerWeek": ""
+      "title": "Secure Deep Learning Framework",
+      "description": "https://drive.google.com/open?id=1ksbMqtU45kdJALNX0nTY6DpUKkDTJzag",
+      "researchArea": "Privacy-enhancing technologies, Programming Languages, Deep Learning",
+      "prerequisites": "Good proficiency in Python and basic understanding of neural networks (e.g. loss and activation functions, optimizers, and training mechanisms).",
+      "hoursPerWeek": "4"
     },
-    "questions": []
+    "questions": [
+      "Please provide a critique of the following paper: https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02841-5",
+      "... or the following paper (pick one): https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-748-smajlovic.pdf"
+    ]
   }
 ]
