@@ -19,5 +19,26 @@
       "Please provide a critique of the following paper: https://genomebiology.biomedcentral.com/articles/10.1186/s13059-022-02841-5",
       "... or the following paper (pick one): https://www.usenix.org/system/files/conference/usenixsecurity25/sec25cycle1-prepub-748-smajlovic.pdf"
     ]
+  },
+  {
+    "id": "8/20/2025 14:01:03",
+    "mentor": {
+      "name": "Claus Horn",
+      "organization": "Yale University",
+      "bio": "Dr. Horn's research interests lie at the intersection of AI for scientific discovery and AI safety. His past research focused on computational biology and autonomous learning systems with life science applications. He served as director of the AI extension school at ICLS and runs research project in collaboration with Yale and ETH Zurich. As a dedicated educator, he has been teaching over 500 students in deep learning, reinforcement learning, and artificial intelligence since 2019.\nBefore this he pioneered data science in Switzerland and he founded a platform for open education to foster collaboration between academics and professional data scientists. After his Ph.D. he worked at Stanford University and  CERN where he contributed to searches for supersymmetric particles, microscopic black holes, and the Higgs boson, whose discovery was awarded the Nobel Prize in 2013. In his Ph.D. thesis, he pioneered machine learning in particle physics and developed one of the first applications of machine learning at the petabyte scale.",
+      "email": "claus.horn@gmail.com",
+      "photo": "https://drive.google.com/open?id=1qjQlzov663E48IsKCmtkI04XhlAr2-MF"
+    },
+    "project": {
+      "title": "Robust Scoring of Research Ideas",
+      "description": "https://drive.google.com/open?id=1jmIBTYQj0uvBxRkcD1TJME0bk9NhZLxg",
+      "researchArea": "AI for Scientific Discovery",
+      "prerequisites": "Highly proficient using Python. Experience with LLM agents is a plus.",
+      "hoursPerWeek": "10"
+    },
+    "questions": [
+      "Please provide a critique of the following article (1/2 page): https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/",
+      "Propose an initial experiment to begin researching the questions in the research plan (1/2 page)."
+    ]
   }
 ]
