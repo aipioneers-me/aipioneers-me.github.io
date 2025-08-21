@@ -1,6 +1,7 @@
 # macOS system files
 .DS_Store  
 /src/.DS_Store 
+node_modules/.DS_Store
 Mentor Registration_*
 
 # Node.js / JavaScript projects

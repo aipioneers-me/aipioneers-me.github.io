@@ -228,23 +228,24 @@ const ResearchProjects = () => {
                   {project.mentor.photo && (
                     <div className="mb-4 flex justify-center">
                       <img 
-                        src={project.mentor.photo
-                          .replace('/open?id=', '/uc?export=view&id=')
-                          .replace('/file/d/', '/uc?export=view&id=')
-                          .replace('/view?usp=sharing', '')} 
+                        src={(() => {
+                          const url = project.mentor.photo;
+                          // Extract file ID from various Google Drive URL formats
+                          const fileIdMatch = url.match(/[-\w]{25,}/);
+                          if (fileIdMatch) {
+                            const fileId = fileIdMatch[0];
+                            // Use the thumbnail API which is more reliable
+                            return `https://drive.google.com/thumbnail?id=${fileId}&sz=w400`;
+                          }
+                          return url;
+                        })()} 
                         alt={`Photo of ${project.mentor.name}`}
                         className="h-40 w-auto object-cover rounded-lg border border-gray-200"
                         onError={(e) => {
                           console.error('Failed to load mentor photo:', project.mentor.photo);
-                          console.error('Transformed URL:', e.currentTarget.src);
-                          // Try thumbnail API as fallback
-                          const fileId = project.mentor.photo.match(/[-\w]{25,}/)?.[0];
-                          if (fileId) {
-                            e.currentTarget.src = `https://drive.google.com/thumbnail?id=${fileId}&sz=w256`;
-                            console.log('Trying thumbnail fallback:', e.currentTarget.src);
-                          } else {
-                            e.currentTarget.style.display = 'none';
-                          }
+                          console.error('Generated thumbnail URL:', e.currentTarget.src);
+                          // Hide the image if it fails to load
+                          e.currentTarget.style.display = 'none';
                         }}
                         onLoad={() => console.log('Mentor photo loaded successfully:', project.mentor.photo)}
                       />
