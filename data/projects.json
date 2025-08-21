@@ -40,5 +40,25 @@
       "Please provide a critique of the following article (1/2 page): https://research.google/blog/accelerating-scientific-breakthroughs-with-an-ai-co-scientist/",
       "Propose an initial experiment to begin researching the questions in the research plan (1/2 page)."
     ]
+  },
+  {
+    "id": "8/20/2025 15:51:19",
+    "mentor": {
+      "name": "Lu Lu",
+      "organization": "Yale University",
+      "bio": "Lu Lu is an Assistant Professor in the Department of Statistics and Data Science at Yale University. His current research interest lies in scientific machine learning and artificial intelligence for science, including theory, algorithms, software, and its applications to engineering, physical, and biological problems. His broad research interests focus on multiscale modeling and high performance computing for physical and biological systems.",
+      "email": "lu.lu@yale.edu",
+      "photo": "https://drive.google.com/open?id=1PcPAifNFd7-TLSHznwIp4sxxd6YYTpQH"
+    },
+    "project": {
+      "title": "Physics-Informed Machine Learning for Improved Madden-Julian Oscillation Prediction",
+      "description": "https://drive.google.com/open?id=1mSsRLQ7DWp-CsaaLBXHmcNEN_s89NG_3",
+      "researchArea": "AI for climate",
+      "prerequisites": "Highly proficient using Python; Developed and trained neural networks models in PyTorch",
+      "hoursPerWeek": "10"
+    },
+    "questions": [
+      "Please read and provide critiques of the following papers: https://www.nature.com/articles/s41467-021-23406-3, https://www.nature.com/articles/s41467-024-50714-1"
+    ]
   }
 ]
