@@ -3,6 +3,8 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import HeroSection from "@/components/sections/HeroSection";
 import { setupAnimations } from "@/utils/animations";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
 
 const MissionSection = () => (
   <section className="bg-white py-0">
@@ -96,6 +98,69 @@ const PIsSection = () => (
   </section>
 );
 
+const LoginSection = () => {
+  const { isAuthenticated, isLoading, user, login, logout } = useAuth();
+
+  if (isLoading) {
+    return (
+      <section className="bg-light-gray py-16">
+        <div className="section-container max-w-2xl mx-auto text-center">
+          <div className="animate-pulse">
+            <div className="h-8 bg-gray-300 rounded mb-4"></div>
+            <div className="h-4 bg-gray-300 rounded w-3/4 mx-auto"></div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <section className="bg-light-gray py-16">
+      <div className="section-container max-w-2xl mx-auto text-center">
+        {isAuthenticated ? (
+          <div>
+            <h2 className="section-title text-2xl md:text-3xl font-bold mb-4 text-accent-blue">
+              Welcome to AI Pioneers!
+            </h2>
+            <p className="text-lg text-charcoal/80 mb-6">
+              You're logged in as <strong>{user?.name || user?.email}</strong>
+            </p>
+            <div className="space-x-4">
+              <Button
+                onClick={logout}
+                variant="outline"
+                className="border-charcoal/20 text-charcoal hover:bg-charcoal/5"
+              >
+                Logout
+              </Button>
+              <a href="/alumni">
+                <Button className="bg-accent-blue hover:bg-accent-blue/90 text-white">
+                  Go to Alumni Network
+                </Button>
+              </a>
+            </div>
+          </div>
+        ) : (
+          <div>
+            <h2 className="section-title text-2xl md:text-3xl font-bold mb-4 text-accent-blue">
+              Access Your Account
+            </h2>
+            <p className="text-lg text-charcoal/80 mb-6">
+              If you've received an invitation email, you can log in here to access the AI Pioneers platform and express interest in research projects.
+            </p>
+            <Button
+              onClick={login}
+              className="bg-accent-blue hover:bg-accent-blue/90 text-white px-8 py-3 text-lg"
+            >
+              Login with Auth0
+            </Button>
+          </div>
+        )}
+      </div>
+    </section>
+  );
+};
+
 const Index = () => {
   useEffect(() => {
     // Update document title and meta description for SEO
@@ -118,6 +183,7 @@ const Index = () => {
         <HowItWorksSection />
         <ProgramTimelineSection />
         <PIsSection />
+        <LoginSection />
       </main>
       <Footer />
     </div>

@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isAuthenticated, isLoading, user, login, logout } = useAuth();
+
+  // Debug logging
+  console.log("🔍 Navbar auth state:", { isAuthenticated, isLoading, user });
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +29,24 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const handleLogin = () => {
+    console.log("🔐 Navbar login button clicked");
+    login();
+  };
+
+  const handleLogout = () => {
+    console.log("🚪 Navbar logout button clicked");
+    logout();
+  };
+
+  const getUserDisplayName = () => {
+    // Always use email username (part before @) - keep it simple
+    if (user?.email) {
+      return user.email.split('@')[0];
+    }
+    return 'User';
   };
 
   const scrollToSection = (sectionId: string) => {
@@ -58,7 +87,38 @@ const Navbar = () => {
             </Link>
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden md:flex items-center space-x-4">
+            {!isLoading && (
+              <>
+                {isAuthenticated ? (
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className="flex items-center space-x-2 text-charcoal border-charcoal/20 hover:bg-white"
+                      >
+                        <span className="text-sm font-medium">
+                          {getUserDisplayName()}
+                        </span>
+                        <ChevronDown className="h-4 w-4" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="w-48">
+                      <DropdownMenuItem onClick={handleLogout} className="cursor-pointer">
+                        Sign Out
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                ) : (
+                  <Button
+                    onClick={handleLogin}
+                    className="bg-accent-blue hover:bg-accent-blue/90 text-white"
+                  >
+                    Login
+                  </Button>
+                )}
+              </>
+            )}
             <a href="https://donorbox.org/ai-pioneers" target="_blank" rel="noopener noreferrer">
               <Button
                 className="bg-dark-red hover:bg-dark-red/90 text-white"
@@ -101,6 +161,37 @@ const Navbar = () => {
             <Link to="/alumni" className="block w-full text-left px-3 py-3 font-medium text-charcoal hover:bg-light-gray rounded-md">
               Alumni Network
             </Link>
+            {!isLoading && (
+              <div className="px-3 py-3 space-y-2">
+                {isAuthenticated ? (
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button
+                        variant="outline"
+                        className="w-full flex items-center justify-between text-charcoal border-charcoal/20 hover:bg-white"
+                      >
+                        <span className="text-sm font-medium">
+                          {getUserDisplayName()}
+                        </span>
+                        <ChevronDown className="h-4 w-4" />
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="w-48">
+                      <DropdownMenuItem onClick={handleLogout} className="cursor-pointer">
+                        Sign Out
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                ) : (
+                  <Button
+                    onClick={handleLogin}
+                    className="w-full bg-accent-blue hover:bg-accent-blue/90 text-white"
+                  >
+                    Login
+                  </Button>
+                )}
+              </div>
+            )}
             <div className="px-3 py-3">
               <a href="https://donorbox.org/ai-pioneers" target="_blank" rel="noopener noreferrer" className="w-full inline-block">
                 <Button
