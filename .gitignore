@@ -3,7 +3,12 @@
 /src/.DS_Store 
 node_modules/.DS_Store
 Mentor Registration_*
+AUTH0_SETUP.md
+
 user_creation/Participant Application (Responses) - Form Responses_*
+user_creation/participant-sheet*.json
+user_creation/uv.lock
+user_creation/.python-version
 
 # Node.js / JavaScript projects
 node_modules/  

@@ -2,6 +2,8 @@ import csv
 import requests
 import time
 import os
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 
 # === CONFIGURATION ===
 # IMPORTANT: You need to create a Machine-to-Machine application in Auth0
@@ -20,9 +22,13 @@ AUTH0_CLIENT_SECRET = "B0iLQyD4h7Dczg7rxT-IswkJSmdz6Sjo7CW381MD_7OZOE6Fac6rgGxSX
 AUTH0_AUDIENCE = "https://dev-m4m8ov68ulxhp1xj.us.auth0.com/api/v2/"
 AUTH0_CONNECTION = "Username-Password-Authentication"
 
-CSV_FILE_PATH = "Participant Application (Responses) - Form Responses.csv"
+##CSV_FILE_PATH = "Participant Application (Responses) - Form Responses.csv"
 EMAIL_FIELD_NAME = "Email"
 APPROVED_FIELD_NAME = "Accepted"
+
+GOOGLE_SHEET_ID = "1HrPrUh_kGdxR9VRDmxy-Y19mnoC7lvb0J3QFK6YnzfY"
+GOOGLE_SHEET_TAB = "Form Responses 1"
+GOOGLE_SERVICE_ACCOUNT_JSON = "participant-sheet-0e7fad4ab655.json"
 
 # === AUTH0 HELPER FUNCTIONS ===
 
@@ -140,7 +146,7 @@ Temporary Password: TempPassword123!
 To get started:
 1. Go to: {invite_link}
 2. Scroll down to the "Access Your Account" section
-3. Click "Login with Auth0"
+3. Click "Login"
 4. Enter your email and temporary password
 5. You'll be prompted to change your password on first login
 
@@ -157,49 +163,85 @@ See you soon!
         print(f"  📬 Custom invitation email sent to {recipient_email}")
 # === MAIN SCRIPT ===
 
-def process_csv():
-    print("🚀 Starting CSV processing...")
-    
-    # Check if CSV file exists
+def _load_rows_from_google_sheet():
+    """Returns a list of dicts using the header row from the sheet."""
+    if not GOOGLE_SHEET_ID:
+        raise RuntimeError("GOOGLE_SHEET_ID is not set.")
+    if not os.path.exists(GOOGLE_SERVICE_ACCOUNT_JSON):
+        raise RuntimeError(f"Service account JSON not found: {GOOGLE_SERVICE_ACCOUNT_JSON}")
+
+    scope = [
+        "https://www.googleapis.com/auth/spreadsheets.readonly",
+        "https://www.googleapis.com/auth/drive.readonly",
+    ]
+    creds = ServiceAccountCredentials.from_json_keyfile_name(GOOGLE_SERVICE_ACCOUNT_JSON, scope)
+    client = gspread.authorize(creds)
+
+    # Open by key for robustness
+    sh = client.open_by_key(GOOGLE_SHEET_ID)
+    ws = sh.worksheet(GOOGLE_SHEET_TAB) if GOOGLE_SHEET_TAB else sh.get_worksheet(0)
+
+    # get_all_records uses the first row as header; empty strings for blanks
+    rows = ws.get_all_records(default_blank="")
+    return rows
+
+def _load_rows_from_csv():
+    """Fallback if you want to keep CSV support."""
     if not os.path.exists(CSV_FILE_PATH):
-        print(f"❌ CSV file not found: {CSV_FILE_PATH}")
-        return
-    
-    # Get Auth0 token
+        raise FileNotFoundError(f"CSV file not found: {CSV_FILE_PATH}")
+    with open(CSV_FILE_PATH, newline="", encoding="utf-8") as csvfile:
+        reader = csv.DictReader(csvfile)
+        return list(reader)
+
+def process_sheet():
+    print("🚀 Starting Google Sheet processing...")
+
+    # Authenticate with Auth0 up front
     token = get_auth0_token()
     if not token:
         print("❌ Failed to get Auth0 token. Please fix the configuration issues above.")
         return
-    
     print("✅ Authenticated with Auth0.")
 
-    with open(CSV_FILE_PATH, newline='', encoding='utf-8') as csvfile:
-        reader = csv.DictReader(csvfile)
-        
-        for row in reader:
-            email = row.get(EMAIL_FIELD_NAME, "").strip()
-            approved = row.get(APPROVED_FIELD_NAME, "").strip().lower()
+    # Prefer Google Sheet; if GOOGLE_SHEET_ID is not set, fallback to CSV
+    try:
+        if GOOGLE_SHEET_ID:
+            rows = _load_rows_from_google_sheet()
+            print(f"✅ Loaded {len(rows)} rows from Google Sheet.")
+        else:
+            print("ℹ️ GOOGLE_SHEET_ID not set; falling back to CSV.")
+            rows = _load_rows_from_csv()
+            print(f"✅ Loaded {len(rows)} rows from CSV.")
+    except Exception as e:
+        print(f"❌ Failed to load input rows: {e}")
+        return
 
-            if approved != "yes" or not email:
-                continue
+    # Process approved users
+    processed = created = skipped = errors = 0
+    for row in rows:
+        email = row.get(EMAIL_FIELD_NAME, "").strip()
+        approved = row.get(APPROVED_FIELD_NAME, "").strip().lower()
 
-            print(f"🔍 Processing approved user: {email}")
+        if approved != "yes" or not email:
+            continue
 
-            try:
-                if user_exists(email, token):
-                    print(f"  🔄 User already exists in Auth0.")
+        print(f"🔍 Processing approved user: {email}")
+
+        try:
+            if user_exists(email, token):
+                print(f"  🔄 User already exists in Auth0.")
+            else:
+                user = create_user(email, token)
+                if user:
+                    print(f"  ✅ Created user: {user['user_id']}")
+                    # Send custom email with login instructions instead of password change ticket
+                    send_custom_email_gmail(email, "https://aipioneers.me")
                 else:
-                    user = create_user(email, token)
-                    if user:
-                        print(f"  ✅ Created user: {user['user_id']}")
-                        # Send custom email with login instructions instead of password change ticket
-                        send_custom_email_gmail(email, "https://aipioneers.me")
-                    else:
-                        print(f"  ❌ Failed to create user for {email}")
-            except Exception as e:
-                print(f"  ❌ Error processing {email}: {str(e)}")
+                    print(f"  ❌ Failed to create user for {email}")
+        except Exception as e:
+            print(f"  ❌ Error processing {email}: {str(e)}")
 
-            time.sleep(0.5)  # rate limiting
+        time.sleep(0.5)  # rate limiting
 
 if __name__ == "__main__":
-    process_csv()
+    process_sheet()

@@ -75,7 +75,7 @@ To automate the process of sending login credentials to approved users:
 
 1. Start your development server: `npm run dev`
 2. Navigate to `/alumni`
-3. Click "Login with Auth0"
+3. Click "Login"
 4. You should be redirected to Auth0's login page
 5. After successful login, you'll be redirected back to the alumni page
 

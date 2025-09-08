@@ -152,7 +152,7 @@ const LoginSection = () => {
               onClick={login}
               className="bg-accent-blue hover:bg-accent-blue/90 text-white px-8 py-3 text-lg"
             >
-              Login with Auth0
+              Login
             </Button>
           </div>
         )}

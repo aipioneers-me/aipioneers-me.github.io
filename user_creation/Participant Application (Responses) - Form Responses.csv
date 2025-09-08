@@ -3,6 +3,364 @@ Example:
 ·      Python: 3 years
 ·      C++: 2 years
 ·      PyTorch: 6 months
-·      Vibe coding: 3 month","List your prior AI/ML experience, if any. This may include courses you have taken. ","National Olympiads / Other Academic Competition Scores, if any.","Describe your prior research experience, if any.",How many hours per week will you be able to work on your research project? ,"By marking this checkbox, I hereby affirm that all information provided in this application is true and accurate to the best of my knowledge.",Accepted
-7/15/2025 21:21:30,claus.horn@gmail.com,Claus Horn2,"American University, WASHINGTON, DC",Industry professional,https://drive.google.com/open?id=1TDSW-aLBNPOhdelrUEzllvUrTZAy0dv7,Python & R : 4 years,I completed machine learning courses during graduate school and participated in a data science bootcamp.,,Personal blog about AI governance  ,8 hrs,I agree,Yes
-7/15/2025 21:21:30,mail@georgruss.ch,Georg Russ,Test University,Student,https://example.com/cert.pdf,Python: 2 years,Some ML experience,No competitions,No research,10 hrs,I agree,Yes
+·      Vibe coding: 3 month ","List your prior AI/ML experience, if any. This may include courses you have taken. ","National Olympiads / Other Academic Competition Scores, if any.","Describe your prior research experience, if any.",How many hours per week will you be able to work on your research project? ,"By marking this checkbox, I hereby affirm that all information provided in this application is true and accurate to the best of my knowledge.",Accepted
+7/15/2025 21:21:30,fahimgate1@gmail.com,Fentaw Abitew ,"American University, WASHINGTON, DC",Industry professional,https://drive.google.com/open?id=1TDSW-aLBNPOhdelrUEzllvUrTZAy0dv7,Python & R : 4 years ,I completed machine learning courses during graduate school and participated in a data science bootcamp.,,Personal blog about AI governance  ,8 hrs ,I agree,Yes
+7/15/2025 22:24:51,nolanmalloy@outlook.com,Nolan Malloy,Loyola University Maryland,Undergraduate student,https://drive.google.com/open?id=1LkPtoFx5r7fJAlILnEv-1CU1Wpo6Zf5K,"Python 1 year, Vibe coding 20 minutes ","Public access courses, AI showdown hosted by Lovable, web resources", ,AP Capstone Research project exploring correlations between learning modalities and student attention and disposition toward schooling from 2021-2023.,20,I agree,Yes
+7/16/2025 6:25:30,elsunnabatov@gmail.com,Elsun Nabatov,Newcastle University,Graduate student,https://drive.google.com/open?id=1B8ADmnhfddrsiwah51GNeL_tiI7ejIQk,python 3 years,"I have over four years of professional experience applying AI and machine learning in production environments across diverse domains including search, NLP, recommendation systems, and generative AI.
+
+Professional Experience:
+
+Yandex (2024–Present): Developed hybrid search systems using BM25, dense retrieval, and LLM-based rerankers. Built a GenAI assistant using Retrieval-Augmented Generation (RAG) and RLHF. Led deployment of ML systems to 10M+ users.
+PRODATA (2022–2024): Designed churn prediction models and fine-tuned LLMs for IT process automation. Built RAG pipelines and credit risk models in production.
+Presidency of Turkey (2022): Built forecasting models to inform government infrastructure decisions and reduce costs using predictive analytics.
+ATL Tech (2020–2021): Applied clustering and segmentation techniques to enhance marketing strategies and dashboard reporting.
+Courses Taken (Academic):
+
+Newcastle University (MSc Data Science):
+Advanced Machine Learning
+Deep Learning
+Engineering in AI
+Big Data & Cloud Computing
+Data Visualisation
+Yildiz Technical University (MSc Quantitative Economics):
+Artificial Intelligence in Quantitative Economics
+Calculus II
+Additional Skills and Tools:
+
+ML Techniques: Random Forests, Gradient Boosting, XGBoost, Neural Networks (CNN, RNN, LSTM), NLP, RAG, GPT models
+Tools & Frameworks: Python, scikit-learn, LangChain, PyTorch, FastAPI, Spark, SQL, AWS, GCP, Airflow, Tableau, Power BI",,"I have a strong background in applied research, particularly at the intersection of AI, economics, and environmental science, with multiple international publications and ongoing academic projects.
+
+Academic Research:
+
+Master’s Thesis (Yildiz Technical University): “Using Machine Learning to Enhance Agricultural Productivity in Turkey” – Developed predictive models incorporating soil moisture, temperature, and precipitation data to optimize agricultural output. Published in a Q1 SCOPUS-indexed journal.
+Newcastle University (Ongoing, 2025): Conducting research on hybrid GAN-Diffusion models for reconstructing high-fidelity 3D medical images from 2D X-rays—combining generative AI with computer vision techniques.
+Publications:
+
+“Hybrid GAN-Diffusion Model for 2D X-Ray to High-Fidelity 3D Medical Image Reconstruction” – In progress, 2025
+International Journal of Environmental Science and Technology (2024) – SCOPUS Q1
+International Journal of Business and Economics Research (2022) – Focused on inflation, budget deficit, and monetary policy forecasting using econometric models.
+Academic Journal of Economic Studies (2020) – Research on digital payments infrastructure in Azerbaijan.
+These projects demonstrate my ability to apply machine learning and statistical methods to real-world challenges, as well as my skill in communicating technical findings through peer-reviewed publication.
+",40 hours per week,I agree,Yes
+7/17/2025 7:19:48,linus.stuhlmann@gmail.com,Linus Stuhlmann,ZHAW / Paul Scherrer Institut,Undergraduate student,https://drive.google.com/open?id=14zKIyCW57-_xuvjnRqjkZRSCbR3OY4a3,"Python: 4 years
+
+Docker: 1.5 years
+
+PyTorch: 1.5 years
+
+MongoDB: 1 year
+
+FAISS: 1 year
+
+FastAPI / Flask: 1 year
+
+Git / GitHub: 4 years
+
+Vibe coding: 2 years :))","* ZHAW School of Engineering (Switzerland):
+
+  * Statistical Modeling
+  * Machine Learning and Data Mining I & II
+  * Introduction to Natural Language Processing
+  * Biomedical Retrieval-Augmented Generation (RAG) Project — Semster project in the prject course: ""Big Data Project"" on scientific RAG systems, presented results at IEEE SDS 2025
+
+* National Taipei University of Technology (Taiwan, Exchange Year):
+
+  * Artificial Intelligence
+  *Computational Biology and Medical Informatics
+
+* Bachelor Thesis:
+  Bench360°: A Unified Framework for Evaluating Local LLM Deployments
+  Developed a benchmarking framework for optimizing the performance and cost-efficiency of locally deployed large language models (LLMs), with a focus on quantization and inference system comparison.","Dean List (Top 5% of ZHAW SoE Students), accepted IEEE SDS25 Paper ","During my Data Science studies at ZHAW, I contributed to a biomedical RAG project presented at IEEE SDS 2025 and completed a bachelor thesis titled ""Bench360°: A Unified Framework for Evaluating Local LLM Deployments."" Starting August 2025, I will join the Paul Scherrer Institute for a 3-month traineeship on scientific RAG systems. I’m currently planning to pursue a master's degree in Asia (Taiwan or Japan) and am actively seeking a mentor to support my research proposal for this in this area.",3-8,I agree,Yes
+7/17/2025 9:28:19,oluwabori.joba@gmail.com,Godsfavour Oluwabori,Universite Paris-Est Creteil,Graduate student,https://drive.google.com/open?id=1CyyLndwIoETf3n4RXCGKiS0zkVBC38vh,"Python: 5 years
+Tensorflow: 3 years","I have a good background in AI and machine learning, built through both academic training and hands-on experience. I am currently pursuing a Master's degree in Biometrics and Intelligent Vision at Université Paris-Est Créteil, where my coursework has focused on AI, computer vision, signal processing, and machine learning. I previously completed a Bachelor’s degree in Mathematics at the University of Ibadan, which laid the foundation for my analytical and modeling skills. To strengthen my practical skills, I completed the Udacity Data Scientist Nanodegree, where I worked on real-world projects including building a recommendation system using similarity and distance metrics, developing a machine learning pipeline for disaster message classification, and deploying models via REST APIs. I also completed the Apache Spark for Big Data course from Udacity and am currently enrolled in Microsoft’s Azure Data Scientist learning path. My projects have included training a YOLO11n segmentation model to detect tumors in CT scans, analyzing biomedical signals like ECG and EEG using FFT and STFT, building interactive visualization tools with PyQt5, and developing a machine learning model to detect Parkinson’s disease using voice data. Most recently, I have been working on a research project involving synthetic face generation and progressive transformation modeling using diffusion models and LLMs, which aligns closely with current trends in generative AI. I am proficient in Python, R, MATLAB, and SQL, and have experience with libraries such as PyTorch, TensorFlow, Scikit-learn, and PySpark. My work reflects a blend of research and development in AI and machine learning.",,,20,I agree,Yes
+7/18/2025 9:01:20,thomasrad@protonmail.com,Thomas Radinger,Kanton Zürich,Industry professional,https://drive.google.com/open?id=1_mpaLmkjQoXrzMxOhgQj9hFbua4ZFnPp,"- Python (2.5 years), including Keras and Tensorflow, and PyTorch (~ 6-9 months)
+- R (3 years)","Courses in Supervised and Unsupervised ML, Deep Learning, NLP, Computer Vision and Audio Signal Processing. As part of current job exploring the use of NLP/LLMs to analyse media reception.",,"No specific research experience in AI/ML, but research has been a part of past and current jobs for data analysis and other projects in the public sector (Analyst with OECD and Research Associate with Canton of Zurich)",8-10 hours,I agree,Yes
+7/20/2025 23:14:09,ronitagarwala01@gmail.com,Ronit Agarwala,University of California San Diego / Lawrence Livermore National Labs,Graduate student,https://drive.google.com/open?id=1d5XBsFTJeb9mci5B5YMFK_WGYqqKNiyL,"Python: 6 years
+Java: 4 years
+C: 3 years
+JavaScript: 1 year
+PyTorch: 2 years
+Docker: 2 years
+Vibe coding: 4 months
+LangChain: 3 years
+LlamaCpp: 3 years","Intern
+Lawrence Livermore National Labs, June 2025 – Present
+• Conducting research and developing applications integrating Large Language Model
+(LLM) agents and knowledge graphs to enhance capabilities in Space Domain
+Awareness.
+
+Intern
+San Diego Supercomputer Center, Oct 2024 – June 2025
+• Contributed to building and testing of LLM-based pipelines for Drug-Chemical relation extraction from PubMed texts.
+• Evaluated said pipelines against ChemProt and DrugProt datasets.
+• Above work contributed to building of synthetic biology knowledge systems for accelerating scientific discovery in the medical domain.
+
+Computer Scientist
+U.S. Air Force, Oct 2023 – July 2024
+• Applied NLP and LLM-based technologies to develop AI-driven solutions to enhance
+real-time communication in the field.
+• Designed and implemented a SLURM cluster to optimize job scheduling and
+computational resource management for my team.
+
+Intern
+NASA Goddard Space Flight Center, July 2023 – Oct 2023
+• Utilized NLP for astronomical information retrieval and trend analysis.
+• Implemented neural topic modeling with BERTopic and fine-tuned transformers to
+classify astrophysical texts based on observation type.
+• Built an end-to-end information extraction system using generative LLMs and LangChain
+to extract astrophysical redshift information from NASA circulars.
+
+RELEVANT COURSEWORK:
+Machine Learning Algorithms, Artificial Intelligence, Bioinformatics, Numerical Calculus,
+Differential Equations, Probability and Statistics",N/A,"RESEARCH IN PROGRESS:
+Large Language Model Driven Analysis of General Coordinates Network (GCN) Circulars (Tentative Title)
+Role: 2nd Author, Manuscript in Preparation, Expected Completion: Aug 2025
+
+UNDERGRADUATE RESEARCH EXPERIENCE:
+Topology Optimization Using Machine Learning
+Army Research Laboratory (DEVCOM), Fall 2022 – Spring 2023
+• Collaborated in a team of 5 to build a finite element solver and different neural network architectures to accelerate topology optimization.
+• Developed own finite element solver for our problem statement using open source software due to lack of funds for purchasing commercial software.
+
+SURF Fellowship
+Summer 2020
+• Developed a Markovian Random Walk Model to study Covid-19 spread.
+
+Research Volunteer
+UCF Nanoscience Technology Center, Summer 2019 – Fall 2019
+• Analyzed approximately 1000 scientific publications on metal oxide supercapacitors.
+• Extracted, cleaned, and prepared data for ML applications.
+",15-20,I agree,Yes
+7/21/2025 7:09:17,fabienne.greier@tum.de,Fabienne Greier,Technical University of Munich ,Graduate student,https://drive.google.com/open?id=1XM2x7Asy7tQij1wLcNX47pBPDwdLfBDi,"Python: 4 years, PyTorch: 4 years","Courses: 
+- Introduction to Deep Learning, 
+- Techniques in Artificial Intelligence, 
+- Artificial Intelligence in Medicine II, 
+- Machine Learning, 
+- Natural Language Processing, 
+- Computer Vision II: Multiple View Geometry, 
+- Computer Vision III: Detection, Segmentation and Tracking,
+- Machine Learning Operations
+
+Practical Courses:
+- Applied Deep Learning in Medicine (Lung Cancer Risk Prediction Using Multimodal Deep Learning)
+- TUM Data Innovation Lab (Digital Snow Scanner: Research and implementation of suitable machine learning methods for the automatic extraction of
+specific snow parameters from raw data, as well as testing on real data sets from customers in the
+hydropower industry in Norway)
+
+Master Thesis: Personalized Intraocular Lens Recommendation Using Large Language Models in cooperation with Carl Zeiss Meditec
+
+Work Experience
+- Working Student AI Product at Hubert Burda Media
+- Research Collaborator at Helmholtz AI 
+
+",- ,"I have gained diverse research experience across several institutions and projects. My first research experiences were at the Technical University of Munich, where I worked as a student assistant at the Chair of Computational Modeling and Simulation in 2019 and 2020. There, I tutored the course ‘Computer Aided Modelling of Products and Processes’, gaining skills in 2D and 3D CAD modeling with AutoCAD and Inventor, graph theory and process models with Pipe2 and Yakindu, and geometric modeling using MATLAB. Later, as a research intern at the Institute for Cognitive Systems, I designed a prosthetic wrist for a modular upper-limb bypass socket for myoelectric prosthetic control, which sparked my interest in biomedical applications. I then worked as a student research assistant at the Chair of Non-destructive Testing, tutoring ‘Fundamentals of Non-destructive Testing’ and processing vibration measurement data in Python.
+
+Additionally, I participated in the TUM Data Innovation Lab, where I implemented machine learning methods to extract snow parameters from raw data for hydropower applications in Norway. In 2023, I conducted a research project on lung cancer risk prediction using multimodal deep learning, where I developed a deep learning framework with PyTorch to combine low-dose CT scans and clinical metadata for improved malignancy prediction. For my Master’s thesis at Carl Zeiss Meditec AG which I have recently finished, I developed a data-driven recommendation system using PyTorch and Large Language Models from Hugging Face to optimize intraocular lens selection for cataract patients, including preparation of results for publication submission. Currently, as a Research Collaborator at Helmholtz AI, I am working on improving large-scale annotation efficiency in cancer research by contributing to a pan-cancer segmentation atlas and evaluating foundation models for scalable tissue structure segmentation and interpretation. These experiences have strengthened my skills in deep learning, data processing, and interdisciplinary biomedical research, and deepened my motivation to further pursue research at the intersection of AI and healthcare.",15,I agree,Yes
+7/25/2025 22:48:47,vid.sharma.20@gmail.com,Vidushi Sharma,NASA GSFC/UMBC,Industry professional,https://drive.google.com/open?id=1EQnx7speeNR4JECupK019idlCchmwz_w,Python: 3+ yrs,CNN and NLP,,"I am working in Astrophysics domain, I have utilised large language models for astronomical alerts.",~4-6 hrs,I agree,Yes
+8/1/2025 9:41:38,elsunnabatov@gmail.com,Elsun Nabatov,Newcastle University,Graduate student,https://drive.google.com/open?id=1q85nFocFKE99Tlbtyh78bcGS3R5ithbM,"- Python: 4 years
+- SQL: 5 years
+- PyTorch: 2 years
+- Vibe coding: 1.5 years","I have over five years of experience in AI and machine learning, both in industry and academia. Professionally, I’ve built and deployed ML and deep learning models in domains such as cybersecurity, finance, and infrastructure. At Yandex, I improved user engagement through personalized ranking models using PyTorch, while at PRODATA I developed churn prediction systems using XGBoost and logistic regression, integrated with MLOps tools like MLflow and Docker.
+
+Academically, I hold a Master’s in Data Science (AI specialization) from Newcastle University, where I completed coursework in Deep Learning, Advanced Machine Learning, and Big Data & Cloud Computing. My second Master’s in Quantitative Economics included applied AI in econometrics.
+
+I’ve also published peer-reviewed research involving generative models (GANs and diffusion models) for medical imaging and machine learning applications in agriculture and economics.
+
+This mix of hands-on engineering, academic depth, and research publication experience has given me a strong foundation in supervised/unsupervised learning, NLP, and deep learning, along with tools like TensorFlow, PyTorch, and GCP.
+
+linkedin link: https://www.linkedin.com/in/elsunnabatov/",,"I have a strong foundation in applied AI research, with experience bridging academic inquiry and real-world impact. My most recent work involves a Hybrid GAN-Diffusion model for reconstructing high-fidelity 3D medical images from 2D X-rays, focusing on the intersection of generative AI and biomedical imaging. This project is currently in progress and aligns with AI for healthcare and safety a core interest of mine.
+
+Previously, I published research in the International Journal of Environmental Science and Technology (Q1 SCOPUS) on applying machine learning to enhance agricultural productivity, analyzing the impact of climate variables like soil moisture and temperature. Another publication examined macroeconomic modeling using ML techniques to understand inflation dynamics.
+
+Across these projects, I led data collection, modeling, and interpretation, and collaborated with both academic advisors and domain experts. My research experience has emphasized reproducibility, ethical application of AI, and clear communication values I see reflected in your program.",40 hours,I agree,Yes
+8/2/2025 13:02:24,ritikamenon6902@gmail.com,RITIKA MENON P,"BHARATHIAR UNIVERSITY  ( PSGR KRISHNAMMAL COLLEGE FOR WOMEN, COIMBATORE )",Graduate student,https://drive.google.com/open?id=1M7thnO4mCZZ0asVxVi86wq2Z8Ge0E18Q,Python: 1 - 2 Years,"Courses learning in  Master's: Machine Learning, Deep Learning and Artificial Intelligence",-,-,20 hours per week,I agree,No
+8/2/2025 15:26:02,mamadykonate563@gmail.com,Mamady Konaté,African Institute For Mathematical Sciences,Graduate student,https://drive.google.com/open?id=16rjKkVCv1LXrBsq9SPiCaJMWdxyJzGj2,"Experience with Programming Languages/Frameworks
+
+Python: 4.5 years (since 2020)
+
+scikit-learn: 4.5 years
+
+pandas / NumPy: 4.5 years
+
+seaborn / matplotlib: 4.5 years
+
+statsmodels: 2 years
+
+Power BI / Plotly: 2 years
+
+PyTorch: 1 year
+
+TensorFlow / Keras: 3 years
+
+Docker: 6 months
+
+Git / GitHub: 4 years","Prior AI/ML Experience
+
+Academic Background:
+Master’s in Mathematical Sciences at AIMS Senegal (2023–2025), with a strong focus on data analysis, machine learning, and forecasting. Thesis topic: Water Level Forecasting on the Senegal River using Deep Learning (N-BEATS, N-HiTS).
+
+Projects:
+
+Built a vision-based pricing system using YOLO for parcel image segmentation (Internship at Logidoo).
+
+Designed forecasting models (ARIMA, DNN, CNN, LSTM, N-BEATS, NHITS) for time series prediction in water level monitoring.
+
+Implemented machine learning pipelines on tabular data (classification, regression) for various academic and freelance tasks.
+
+Courses & Certifications:
+
+Deep Learning for Computer Vision – WorldQuant University
+
+Applied Data Science Lab – WorldQuant University
+
+Machine Learning Engineer Workflow – Udemy
+
+Machine Learning Career Path – Codecademy
+
+More Projects:
+Available on my GitHub: github.com/mamady1999",,"Prior Research Experience
+
+Master’s Thesis at AIMS Senegal:
+  Conducting a research project on *Water Level Forecasting at Bakel Station on the Senegal River. This involves:
+
+   Time series modeling using deep learning architectures (N-BEATS, N-HiTS)
+   Statistical analysis and data preprocessing techniques
+   Evaluation of model performance under seasonal and peak conditions
+   Goal: produce a publishable paper on flood forecasting and hydrological planning in West Africa
+
+Survey Analysis (AIMS coursework):
+  Participated in small-scale projects involving data collection, hypothesis testing, and interpretation of social and environmental datasets.
+
+Research Skills Developed:
+
+   Framing research questions and defining methodology
+   Literature review and comparative model analysis
+   Technical report writing and scientific communication
+",15–20 hours per week,I agree,Yes
+8/3/2025 20:31:54,sumbalmurtaza1@gmail.com,Sumbal Murtaza,FAST Nuces Islamabad,Undergraduate student,https://drive.google.com/open?id=1DY3Bt2bEpKOJkt5CkKlfTj6YkFwFfFeP,"C++: Academic experience – learned during BS Fintech
+· C: Academic experience – learned during BS Fintech
+· Python: Academic experience – used in coursework and assignments
+· MySQL: Academic experience – basic database design and querying
+· Web Development (HTML, CSS, JavaScript): Academic experience – built educational and personal projects
+While I don't have formal industry experience yet, I have built several academic and personal projects using these technologies as part of my BS Fintech degree.","Machine Learning (FAST University)
+Covered in the following courses:
+· Datamining and Business Research
+· Programming for Finance
+Learned core machine learning concepts, supervised/unsupervised learning, model evaluation, and applied ML to financial datasets.
+
+Neural Networks and Deep Learning (DeepLearning.AI)
+Completed online specialization
+Gained hands-on experience with deep learning, forward/backward propagation, hyperparameter tuning, and building neural networks using Python and NumPy.","Punjab Essay Writing Competition – Participant Represented my institution at the provincial level, showcasing critical thinking and writing skills.  Academic Scholarship Recipient Awarded scholarship for outstanding academic performance during undergraduate studies.  FAST University Academic Medals · Gold Medalist – 2nd, 3rd, and 4th semesters · Bronze Medalist – 5th semester Recognized for consistent academic excellence","Business Research & Data Mining (FAST University)
+Conducted exploratory and analytical research on real-world datasets. Gained experience in data collection, cleaning, hypothesis testing, and applying data mining techniques to uncover insights.
+
+Financial Data Analytics
+Worked on projects involving the analysis of stock market trends, portfolio performance, and risk indicators using statistical tools and financial models.
+
+Econometrics
+Applied regression analysis, time series forecasting, and hypothesis testing to economic and financial datasets. Familiar with tools such as EViews and Excel for data-driven research.","I can commit around 10–15 hours per week to the research project, depending on deadlines and workload.",I agree,Yes
+8/4/2025 9:07:06,azfarjiya1@gmail.com,Javeria Azfar,Habib University,Undergraduate student,https://drive.google.com/open?id=18JROroLhZk6hOS5lyzSeXxr6Q5LwYD4u,"python - 4 years, c ++ - 2 years, pytorch - 1 year, opencv - 1 year, vivado - 3 years, Verilog and SystemVerilog - 3 years, MATLAB - 3 years.",I have taken a computer vision course where we learned about AI and ML frameworks and how they are used in computer vision and I have also taken a course on Reinforcement learning. ,none,"I gained research experience in my courses namely human computer interaction where we worked on developing a cost effective POS (point of sale) system alternative for local shops owners in Pakistan. I also worked on an Autism Detection App, we did not go onto develop it but the research prior to that was conducted and presented to a local NGO we were planning to partner with. For more technical research I worked on an application of evolutionary based computation to develop a diet plan optimizer for Atheletes. We developed the application as part of our Computational Intelligence course and then went onto to write a paper that was accepted in the EvoStar Conference 2025. The paper is published in Springer as part of the Lecture Notes in Computer Science book series. ",20,I agree,Yes
+8/4/2025 12:23:07,suchita.my@gmail.com,Suchita,Mallareddy Medical College for Women,Graduate student,https://drive.google.com/open?id=18fw9lB0tvRicY6oAIMMzLNZQNQUhRVhr,NA,,,Have worked on few Systematic Reviews and Literature reviews. Currently working on Original Research projects.,5,I agree,No
+8/4/2025 12:43:26,dr.dimplemalviya@gmail.com,Dimple Malviya ,"Modern Dental College & Research Centre, Indore",Graduate student,https://drive.google.com/open?id=1A9v2OH8SIqbkQS4jzDpI4MaONtDKzeeo,None. Learning Python currently.,AI for everyone by Andrew Ng,"NEET MDS: 547// AIR 2041, INICET: 131.25//AIR 302",I took part in the ICMR STS Program.,10 hours.,I agree,No
+8/4/2025 13:26:51,nikitatompe@gmail.com,Dr. Nikita Tompe ,MUHS,Graduate student,https://drive.google.com/open?id=1hcqt7xinlqvwaGJBgcfnUu5XkNOuuTJP,Newbie. Did basics of python,NA,NTSE and Scholarships in 4th and 7th grade. ,I have one case report publication and 3 papers in progress one is a systematic review ,6 - 8 hours ,I agree,No
+8/4/2025 15:17:28,pkayeego@uwaterloo.ca,Pranav Venkatesan,University of Waterloo,Graduate student,https://drive.google.com/open?id=1TjTeo8fNHV7MsG0lQTl8HxJZpdWfrHdx,"1. Python, C++: 6 years
+2. SQL: 2 years
+3. MATLAB: 4 years
+4. PyTorch, TensorFlow, Keras: 4 years
+5. Scikit-learn, OpenCV, Pandas, NumPy: 3 years
+6. LangChain: 6 months","1. CV Research Associate at Christie Digital Systems (Part of my graduate degree)
+2. ML Research Intern at University of Erlangen Nuremberg, Germany
+3. AI Research Intern at University of Guelph, Canada
+4. AI Research Intern at IIT(BHU), India",,"1. CV Research Associate at Christie Digital Systems (Part of my graduate degree)
+2. ML Research Intern at University of Erlangen Nuremberg, Germany
+3. AI Research Intern at University of Guelph, Canada
+4. AI Research Intern at IIT(BHU), India",10,I agree,Yes
+8/5/2025 2:13:44,mrudulabhalke75225@gmail.com,Dr. Mrudula Bhalke,Jawaharlal Institute of Postgraduate Medical Education and Research ,Graduate student,https://drive.google.com/open?id=1Kbt6AFbB-sXogfPnGqoPUcSbtAHSad1w,"Vibe coding: 4 months 
+Basic Python: 1 month","1. Probability for GenAI course - learnt the basics (concept, maths and code) of PMF, PDF, KL Divergence, Logistic and Linear Regression etc
+2. Designed, gave feedback on development and tested an agentic Generic Medical Chatbot which is up for deployment on a healthcare website.
+3. Stanford CS50 python on youtube.
+4. Taught basic AI / ML / Data Science in Healthcare for my community.
+5. Drafted a project for ECG Image Analysis ML model with self-supervised learning - currently under revision
+6. Designed AI in Healthcare projects for Hackathons: Medical Record Digitisation and Analysis, Agentic Medical Triage with Computer Vision
+7. Designed multiple Agentic AI Project ideas: https://mru00-hub.github.io/Mru-personal-portfolio/
+8. Subjected a detailed Project Proposal for a Small Language Model for Frontline Healthworkers in India along with a team of AI researchers and Engineers.
+9. Designed MCP / Agentic Framework Integration pipeline for a hospital. 
+10. Designed an AI powered Clinical case taking assistant. 
+11. AI Dashboards using Microsoft PowerBI",Indian National Biology Olympiad 2018 - among Top 35 in the country ,Project RadArena (comparing accuracy of General Foundation Models with Radiologists in detecting complex medical conditions) - Abstract in line for submission for RSNA ,8-10,I agree,Yes
+8/5/2025 3:55:03,jibinkallanickal@gmail.com,Jibin Sebastian,SupplyOn AG,Graduate student,https://drive.google.com/open?id=1W-by8z75tVNEEO3wqlYr2dADU87TeUQn,Python: 3 years and Vibe coding: 6 month and Azure DevOps 3 months,Worked in Predictive analytics and Predictive maintainance. Build LLM based similarity check tool. ,,"Worked on research case study : Automated
+classification of activity groups based on
+empirical motion data:
+[https://github.com/jibinsebastian/Research-Case-Study]",4,I agree,Yes
+8/6/2025 0:30:20,sakthivel25221@gmail.com,Sakthivel S,"Ruby hall clinic, Pune",Graduate student,https://drive.google.com/open?id=1v4hq1bNFW--cS3BN1qQPNxkTFAkQXOoj,no,no,No,Case report - Covid associated transverse myelitis,4-6hrs,I agree,No
+8/6/2025 6:08:07,doctorgurusx@gmail.com,Dr.Guru Shankar ,Dr.D.Y.Patil Vidhyapeeth Research and Management ,Graduate student,https://drive.google.com/open?id=1Q9Rg2pM6jUOQeDoownsbNlAA7Jc_GNwy,Vibe coding,"IIT Delhi workshop,IISc Healthcare ai for clinicians ",,,10-20 hours,I agree,Yes
+8/6/2025 22:22:53,sagwariamudit@gmail.com,Mudit Sagwaria,"DNB, New Delhi, India",Graduate student,https://drive.google.com/open?id=1-dLfn8_cypaGqVCMD-S9N9Q0Pvxg4KwO,None,,,,4,I agree,No
+8/8/2025 13:12:14,nadimasmamk@gmail.com,Nadim AlSammak,University Of Glasgow,Graduate student,https://drive.google.com/open?id=1kzDWEmnkwQi274tSRnes5_rK-78fhdUO,"Python, Pytorch, Hugginf Facem Java, C# and other","In 2023 I joined Ai training managed by Gogole, Udacity and Spark(Ai development)
+in 2024 I joined Generative Ai training (Bertelsmann Next Generation)
+In 2024 I joined Ai reserach mentorship aims to give me fundemental knoladge in machine learning(MPI-SWS)
+Now I taking Machine learning scientist provided by Data Camp",I joined Hackathon in computer bision project (smart glasses for blind people),"-I made software to generate university timetables using evolutiionary algorithms under the supervision of Dr.Bassem Alejla(in 2022)
+-I made software to classifiy documents under the supervision of Dr.Ribhi Baraka( 2023)
+- Now I am working on PHD proposal to start PHD in medical images segmentation in 2026
+",56 Hours (at least),I agree,Yes
+8/10/2025 22:59:26,ved.06.soni@gmail.com,Vedant Soni,Texas A&M University ,Undergraduate student,https://drive.google.com/open?id=1ytK6SfLAYLL3HPTE7yw__1_yhy1qsFWM,"Python – 4 years
+C++ – 3 ½ years
+PyTorch & TensorFlow – 1 ½ years
+ROS 2 – 1 year
+JavaScript (React/Node) – 2 years
+MATLAB – 2 years
+VibeCoding – 7 months","I have extensive AI/ML experience through self-study, university coursework, research, and applied projects. I have completed self-paced Stanford courses (CS229: Machine Learning, CS231n: Convolutional Neural Networks, CS221: Artificial Intelligence: Principles & Techniques, CS224n: Natural Language Processing with Deep Learning) and studied Probabilistic Robotics (Sebastian Thrun, Wolfram Burgard, Dieter Fox), Deep Learning (Ian Goodfellow, Yoshua Bengio, Aaron Courville), and Reinforcement Learning: An Introduction (Richard S. Sutton, Andrew G. Barto). At Texas A&M, I have audited graduate courses including CSCE 633: Machine Learning, CSCE 642: Deep Learning, and CSCE 649: Robot Motion Planning, alongside completing AI-related undergraduate courses. My research includes work in the Adaptive Robotics and Technology Lab on deep reinforcement learning for robotic swarms (ROS 2) and in the DIGIT Lab on LLM-powered retrieval-augmented generation for materials science. As founder of a nonprofit named Fern, I developed Talkr (AI-powered AAC app) and TalkrBot (ROS 2 assistive robot). I also co-founded Rec Reach, a startup where I built the AI-based sports matchmaking system. At my university robotics club, I lead the Humanoid Robotics Project, oversee software development, and run AI/ML workshops for all members. I regularly compete in AI-focused hackathons and train autonomous racing models for the AWS DeepRacer competition. However, I am eager to gain more direct experience in cutting-edge AI research, as my current primary lab role is focused on robotics, and I want to deepen my expertise in core AI advancements.",AMC12a - 127.5 AIME - 4 (I did this only studying for one year in my senior year of high school),"I am a research assistant at Texas A&M’s Adaptive Robotics and Technology (ART) Lab, where I work on deep reinforcement learning for robotic swarms. I design and train multi-agent coordination policies using PyTorch, RLlib, and ROS 2, integrating them into Isaac Sim and Gazebo for large-scale simulation. My focus includes enabling energy-efficient, collaborative navigation, developing ROS 2 middleware for real-time inter-robot communication, and creating reproducible training pipelines with performance benchmarks. I also serve as a research assistant in the DIGIT Lab, where I develop LLM-powered retrieval-augmented generation pipelines for materials science, integrating Hugging Face Transformers with vector databases to improve scientific data retrieval. This past year, I led ThinkTank Team Orion, a 10-member research team competing in the AIAA 2024–2025 Design Challenge. I managed technical direction, oversaw experimental design, and authored our team’s research paper proposing a novel aerospace system architecture, which we plan to submit for conference review.",~20,I agree,Yes
+8/11/2025 5:16:24,bibincnambiar@gmail.com,Bibin chandran,AIIMS JODHPUR,Industry professional,https://drive.google.com/open?id=1YtuaA-VkxSIPZs3X1bZoNIANnL5kWgAV,Beginner,,ALL INDIA RANK 322 AIIMS EXAMINATION 2013,Nil ,6,I agree,No
+8/11/2025 12:44:31,pranavsolanke85@gmail.com,Pranav Solanke ,GMC Aurangabad ,Undergraduate student,https://drive.google.com/open?id=1fagXpIFnHK0_47GjQtN2VdxJfPXAoQke,No coding experience ,,NEET UG 2023- 624 ,,7,I agree,No
+8/12/2025 1:20:14,hishamim2006@gmail.com,Md Shamim Sarker,Stony Brook University,Undergraduate student,https://drive.google.com/open?id=1BYiR4KjayH69bf_bmkfWpX6LKe-FE-E6,"Python: 1 year+
+Java: 1 year
+HTML/CSS: 8 months","Stock Market Predictor, machine learning model to predict S&P 500 index movements",,,10-20,I agree,Yes
+8/13/2025 12:56:28,wilsonjomo0@gmail.com,Wilson Jomo,Accela Academy,Graduate student,https://drive.google.com/open?id=1HYpNiAs5OGcU0cg2en9NG8B4uAMfbbaf,"Python : 5 years, Pytorch: 1.5 years, Tensorflow/Keras : 3 years, SQL: 1 year ","Applied Data Science Course - World Quant University
+3 - Weeks Data Science Workshop - University of Glasgow
+Machine Learning Intern - Accela Academy  Nairobi, Kenya",2nd Runners up for the Hack4dev Hackathon,,24 hours,I agree,Yes
+8/15/2025 19:51:26,jasonlei@umich.edu,Jason Lei,University of Michigan,Undergraduate student,https://drive.google.com/open?id=1oGvxtGUBpvkvqT4zLus4iIEo82qe6EIr,"Python 1 year, C++ 2 years, Java 1 year,  ",Machine Learning Foundations course with BTT,USACO Silver,Did market research with PulpAI startup. Mainly worked on google sheets and random research tasks. ,5-10,I agree,Yes
+8/21/2025 20:48:07,khang.nguyen@stonybrook.edu,Khang Nguyen,Stony Brook University,Undergraduate student,https://drive.google.com/open?id=1DYcqvoYBw4BpTx1L0zJtK43Du7qjt55_,"Python: 3+ years (used extensively at Tierra Diamond, WORM Lab, and multiple projects)
+JavaScript/TypeScript: 2+ years (React, Node.js experience across multiple projects)
+Java: 2+ years (listed in technical skills)
+C/C++: 2+ years (listed in technical skills)
+SQL: 2+ years (PostgreSQL, SQLite, MongoDB experience)
+React: 1.5+ years (used at Tierra Diamond and multiple projects)
+Node.js: 1.5+ years (MERN stack development)
+FastAPI: 6+ months (Smart Workflow Automation Engine project)","Practical AI/ML Implementation: Integrated GPT-4 and Claude models in production applications with custom prompt chains, achieving 91% automation accuracy in workflow processing
+Machine Learning Libraries: Experience with scikit-learn, TensorFlow, pandas, NumPy for data analysis and predictive modeling
+Predictive Modeling: Built predictive models using scikit-learn to analyze plant response patterns, achieving 78% accuracy in growth prediction
+LLM Integration: Implemented RAG (Retrieval-Augmented Generation) architecture and semantic search capabilities in knowledge management platforms
+Statistical Analysis: Applied advanced statistical methods (ANOVA, ANCOVA, Tukey's post-hoc tests) on large datasets (15,000+ data points)",2020 Vietnam National Biology Olympiad Third Prize. SAT 1520/1600. ,"WORM Lab Research Assistant (Jan 2025 – May 2025)
+Conducted quantitative research on plant growth patterns using advanced data science techniques. Developed automated data collection pipelines processing 2,000+ daily sensor readings with 95% data integrity. Built comprehensive ETL workflows and statistical analysis frameworks, performing complex statistical tests on large datasets. Created predictive models and interactive visualizations that improved research team efficiency by 40%. Managed collaborative research through version-controlled systems and optimized data storage for team access.",15,I agree,Yes
+8/25/2025 23:08:09,soniatan127@gmail.com,Sonia Tan,Gap year before graduate school,Graduate student,https://drive.google.com/open?id=1uKKxxxwMZIEMFGypJA4ZNQc3cvM4XILR,"Python: 6 years
+R: 2 years
+Scikit-learn: 1 years
+Tensorflow + Keras: 6 months
+Streamlit: 6 months
+BeautifulSoup: 1 month","Courses taken: Probability Theory, Data Analysis, Time Series Analysis, Data Mining, Numerical Analysis, Machine Learning Foundations
+
+Experience: 
+Social Justice Fund, AI Teaching Assistant - Taught high school students topics in AI and NLP
+JPMorgan Chase, Break Through Tech Fellow - Built a RAG-based document question answering chatbot web application (LLMs, vector search)
+
+Non-Academic Competitions: 
+NY Botanical Garden - Built an image classification model to identify categories of plant images, placing in top 10 (deep learning, CNNs, transfer learning)
+Codedex Hackathon – Trained several models to predict Paris Olympics medal outcomes using historical and scraped data (KNN, decision tree, linear regression, penalized regression)",,"Mathematical Puzzles (Dr. Pramod Ganapathi) – Analyzed algorithmic approaches to the Pirate Game puzzle
+
+Integrating Population Health Informatics (Dr. Pamela Ginex, Dr. Mary Saltz) – Identified relevant datasets to study links between insurance status, mental health service use, and hospital admission rates
+
+Markov Model Music Generation (Undergraduate thesis, supervised by Dr. Eugene Feinburg) – Developed a Markov model-based framework for algorithmic music generation",10,I agree,Yes
+8/31/2025 13:49:38,chhavijeswani0786@gmail.com,Chhavi Jeswani ,NSCB MEDICAL COLLEGE JABALPUR ,Industry professional,https://drive.google.com/open?id=1vL1CvMOw-a8zNaQhw7jfCSfHSl4hpye8,No6 experience yet,,,,7-8 hour,I agree,No
+9/6/2025 22:01:24,amalbilal20@gmail.com,Amal Bilal,Stony Brook University,Undergraduate student,https://drive.google.com/open?id=1l0gy5kG_OChxq68JNnSkSUNJcv1WqsBD,"Python: 4 years
+Java: 3 years
+NumPy: 1 year
+Pandas: 1 year
+Keras/TensorFlow: 1 year
+C: 3 months
+HTML/CSS: 3 months","Inspirit AI Scholars Program: introduction to machine learning and AI ethics, culminating in final project ""PneumonAI"" to detect pneumonia from chest X-Ray images. Used image augmentation and data analysis techniques.
+
+Break Through Tech Program (selected from 3,500+ applicants): 10 week summer course ""Machine Learning Foundations"" and currently participating in industry partner project at Chambers Capital to create an ML model to predict which entrepreneurs will be most successful based on grit score. Program is 12 months long and hosted by Cornell Tech.
+
+CS50: Introduction to Artificial Intelligence with Python - Completed this Harvard course: watched lectures, completed quizzes, and solved problem sets.
+
+CSE 351: Introduction to Data Science - Currently enrolled in this Python comprehensive course at Stony Brook University.",,"CERN IdeaSquare: Designed computationally informed models for sustainable planetary colonization, integrating resource optimization, sensing systems, and timeline planning.
+Collaborated in an interdisciplinary team to apply systems modeling and resource allocation to real-world environmental challenges.
+
+Currently working in the Graph Lab at Stony Brook University to develop an ML time series analysis model for heart disease. In the process of completing introductory coursework through an MIT course: ""Machine Learning for Healthcare"".",I will be able to contribute 6 hours per week on this research project.,I agree,Yes
