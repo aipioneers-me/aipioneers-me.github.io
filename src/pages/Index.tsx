@@ -34,7 +34,7 @@ const HowItWorksSection = () => (
   </section>
 );
 
-const ProgramTimelineSection = () => (
+const ProgramTimelineSection_OLD_KEEP_DONOT_DELETE = () => (
   <section className="bg-white py-0">
     <div className="section-container max-w-xl mx-auto">
       <h2 className="section-title text-center mb-4">Program Timeline</h2>
@@ -54,6 +54,28 @@ const ProgramTimelineSection = () => (
         <div className="flex items-start">
           <span className="w-64 text-right pr-4 font-medium">Demo day with project presentations:</span>
           <span className="flex-1 text-left"><strong>November 29, 2025</strong></span>
+        </div>
+      </div>
+    </div>
+  </section>
+);
+
+const ProgramTimelineSection = () => (
+  <section className="bg-white py-0">
+    <div className="section-container max-w-xl mx-auto">
+      <h2 className="section-title text-center mb-4">Program Timeline</h2>
+      <div className="text-lg text-charcoal/80 space-y-2">
+        <div className="flex items-start">
+          <span className="w-64 text-right pr-4 font-medium">Submission of project proposals:</span>
+          <span className="flex-1 text-left"><strong>Mentors may submit project proposals anytime</strong></span>
+        </div>
+        <div className="flex items-start">
+          <span className="w-64 text-right pr-4 font-medium">Student Registration:</span>
+          <span className="flex-1 text-left"><strong>Students can register and apply to open projects anytime. Projects start as soon as they are filled.</strong></span>
+        </div>
+        <div className="flex items-start">
+          <span className="w-64 text-right pr-4 font-medium">Demo days:</span>
+          <span className="flex-1 text-left"><strong>We will have regular demo days with project presentations.</strong></span>
         </div>
       </div>
     </div>
