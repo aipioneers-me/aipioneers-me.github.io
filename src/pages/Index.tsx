@@ -70,8 +70,8 @@ const ProgramTimelineSection = () => (
           <span className="flex-1 text-left"><strong>Mentors may submit project proposals anytime</strong></span>
         </div>
         <div className="flex items-start">
-          <span className="w-64 text-right pr-4 font-medium">Student Registration:</span>
-          <span className="flex-1 text-left"><strong>Students can register and apply to open projects anytime. Projects start as soon as they are filled.</strong></span>
+          <span className="w-64 text-right pr-4 font-medium">Participant Registration:</span>
+          <span className="flex-1 text-left"><strong>Participants can register and apply to open projects anytime. Projects start as soon as they are filled.</strong></span>
         </div>
         <div className="flex items-start">
           <span className="w-64 text-right pr-4 font-medium">Demo days:</span>
