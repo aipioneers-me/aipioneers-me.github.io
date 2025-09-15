@@ -4,6 +4,7 @@ import time
 import os
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
+from config import AUTH0_DOMAIN, AUTH0_CLIENT_ID, AUTH0_CLIENT_SECRET, AUTH0_AUDIENCE, GMAIL_APP_PASSWORD, FROM_EMAIL
 
 # === CONFIGURATION ===
 # IMPORTANT: You need to create a Machine-to-Machine application in Auth0
@@ -12,14 +13,6 @@ from oauth2client.service_account import ServiceAccountCredentials
 # - create:users
 # - update:users
 
-AUTH0_DOMAIN = "dev-m4m8ov68ulxhp1xj.us.auth0.com"
-#AUTH0_CLIENT_ID = "fcmwZ9jixnd07RpFvnaC44AiQPWbljaM"
-#AUTH0_CLIENT_SECRET = "Sgo7WlEDVVgQNi1z2rwX41mr7I1j-LNdIyqhbZN1T5pbuJGJsw6jxnCGKl-Y98YO"
-AUTH0_CLIENT_ID = "d5HOao3NEQJ8bDcdtSKFv6Aug1Hyyorg"
-AUTH0_CLIENT_SECRET = "B0iLQyD4h7Dczg7rxT-IswkJSmdz6Sjo7CW381MD_7OZOE6Fac6rgGxSXW3IaX-H"
-
-# For Management API, use the Management API identifier
-AUTH0_AUDIENCE = "https://dev-m4m8ov68ulxhp1xj.us.auth0.com/api/v2/"
 AUTH0_CONNECTION = "Username-Password-Authentication"
 
 ##CSV_FILE_PATH = "Participant Application (Responses) - Form Responses.csv"
@@ -127,8 +120,8 @@ import smtplib
 from email.message import EmailMessage
 
 def send_custom_email_gmail(recipient_email, invite_link):
-    sender_email = "aipioneers.me@gmail.com"
-    sender_password = "slic casc umbg xpgm"  # generated from Gmail App Passwords
+    sender_email = FROM_EMAIL
+    sender_password = GMAIL_APP_PASSWORD
 
     msg = EmailMessage()
     msg["Subject"] = "Your application at AI Pioneers"

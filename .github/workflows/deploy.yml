@@ -10,6 +10,7 @@ on:
       - 'vite.config.ts'
       - 'package.json'
       - 'index.html'
+      - '404.html'
       - '.github/workflows/**'
   workflow_dispatch:  # allows manual trigger from GitHub UI
 
